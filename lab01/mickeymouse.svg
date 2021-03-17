@@ -43,8 +43,29 @@
   <text x="438" y="12" font-size="12" text-anchor="start" fill="red">448</text>
   <text x="492" y="12" font-size="12" text-anchor="start" fill="red">512</text>
 
-  <path d="M256 256 V270 V242 M256 256 H270 H242" stroke="black" fill="white"></path>
-  <text x="254" y="250" font-size="16" text-anchor="middle" fill="red">(256, 256)</text>
-</svg>
+  <defs>
+    <path id="path"
+        d="M335 170 A160 140, 0, 0, 0, 180 170
+                   ,100 90, -20, 0, 0, 64 54
+                   ,100 90, -20, 0, 0, 14 192
+                   ,100 90, -20, 0, 0, 128 220
+                   ,150 155, 00, 0, 0, 256 465
+                   ,150 155, 00, 0, 0, 384 220
+                   ,100 90, -20, 0, 0, 498 192
+                   ,100 90, -20, 0, 0, 448 54
+                   ,90 90, -0, 0, 0, 335 170z
+    "/>
+  </defs>
 
+  <use xlink:href="#path" stroke-width="10" stroke="#000" fill="none" opacity="0.3"/>
+
+  <!--圓點-->
+  <circle id="circle" cx="0" cy="0" r="25" stroke="black" fill="white">
+    <animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
+      <mpath xlink:href="#path"/>
+    </animateMotion>
+    <animate attributeName="r" to="10" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>
     

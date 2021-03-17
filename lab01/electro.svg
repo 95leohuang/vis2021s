@@ -43,8 +43,43 @@
   <text x="438" y="12" font-size="12" text-anchor="start" fill="red">448</text>
   <text x="492" y="12" font-size="12" text-anchor="start" fill="red">512</text>
 
-  <path d="M256 256 V270 V242 M256 256 H270 H242" stroke="black" fill="white"></path>
-  <text x="254" y="250" font-size="16" text-anchor="middle" fill="red">(256, 256)</text>
-</svg>
 
+
+  <path d="M270 420 Q337 390, 386 430" stroke="cyan" stroke-width="5" fill="none"/>
+  <path d="M386 429 Q397 448, 445 390" stroke="cyan" stroke-width="5" fill="none"/>
+  <path d="M441 357 A10 15,30 0 0 472 370z" stroke="cyan" stroke-width="5" fill="none"/>
+  <path d="M458 343 L450 360" stroke="cyan" stroke-width="5"/>
+  <path d="M474 348 L464 363" stroke="cyan" stroke-width="5"/>
+  <path d="M437 310 Q411 332, 430 328 T438 343" stroke="cyan" stroke-width="5" fill="none" />
+  <path d="M512 326 Q481 337, 500 340 T485 354" stroke="cyan" stroke-width="5" fill="none" />
+
+
+
+  <defs>
+    <path id="path"
+        d="M191 0 Q140 80, 195 65 T190 120
+           H0 V385 H141
+           C120 430,100 440,92,448
+           A10 20,50 0 0 118 470
+           A25 40,-10 0 0 165 485
+           H220
+           A25 45,190 0 0 264 470
+           A10 20,310 0 0 292 448 
+           C264 430,284 440,240 385
+           H392 V120 H208
+           Q264 46, 208 57 T200 0z
+    "/>
+  </defs>
+
+  <use xlink:href="#path" stroke-width="5" stroke="cyan" fill="none" opacity="1"/>
+
+  <!--圓點-->
+  <circle id="circle" cx="0" cy="0" r="5" stroke="blue" fill="white">
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+      <mpath xlink:href="#path"/>
+    </animateMotion>
+    <animate attributeName="r" to="20" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>
     
