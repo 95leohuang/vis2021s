@@ -65,23 +65,24 @@
   </defs>
 
   <use xlink:href="#path" stroke-width="10" stroke="#F00" fill="none" opacity="0.3"/>
- <circle cx="95"  cy="180" r="1" stroke=red fill=red> <animate attributeName="r" to="2" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="63"  cy="300" r="1" stroke=red fill=none> <animate attributeName="r" to="3" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="128" cy="390" r="1" stroke=red fill=none> <animate attributeName="r" to="4" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="400" cy="390" r="1" stroke=red fill=none> <animate attributeName="r" to="5" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="440" cy="230" r="1" stroke=red fill=none> <animate attributeName="r" to="6" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="456" cy="190" r="1" stroke=red fill=none> <animate attributeName="r" to="7" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="437" cy="155" r="1" stroke=red fill=none> <animate attributeName="r" to="8" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="420" cy="100" r="1" stroke=red fill=none> <animate attributeName="r" to="9" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="395" cy="90" r="1" stroke=red fill=none> <animate attributeName="r" to="10" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="348" cy="115" r="1" stroke=red fill=none> <animate attributeName="r" to="11" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="330" cy="95" r="1" stroke=red fill=none> <animate attributeName="r" to="12" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="270" cy="120" r="1" stroke=red fill=none> <animate attributeName="r" to="13" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="180" cy="130" r="1" stroke=red fill=none> <animate attributeName="r" to="14" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="120" cy="105" r="1" stroke=red fill=none> <animate attributeName="r" to="15" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="84" cy="120" r="1" stroke=red fill=none> <animate attributeName="r" to="16" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="76" cy="160" r="1" stroke=red fill=none> <animate attributeName="r" to="17" dur="4s" repeatCount="indefinite"/> </circle>
-<circle cx="90" cy="185" r="1" stroke=red fill=none> <animate attributeName="r" to="18" dur="4s" repeatCount="indefinite"/> </circle>
+
+<circle cx="95"  cy="180" r="1" stroke="red" fill="red"> <animate attributeName="r" to="2" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="63"  cy="300" r="1" stroke="red" fill="none"> <animate attributeName="r" to="3" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="128" cy="390" r="1" stroke="red" fill="none"> <animate attributeName="r" to="4" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="400" cy="390" r="1" stroke="red" fill="none"> <animate attributeName="r" to="5" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="440" cy="230" r="1" stroke="red" fill="none"> <animate attributeName="r" to="6" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="456" cy="190" r="1" stroke="red" fill="none"> <animate attributeName="r" to="7" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="437" cy="155" r="1" stroke="red" fill="none"> <animate attributeName="r" to="8" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="420" cy="100" r="1" stroke="red" fill="none"> <animate attributeName="r" to="9" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="395" cy="90" r="1" stroke="red" fill="none"> <animate attributeName="r" to="10" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="348" cy="115" r="1" stroke="red" fill="none"> <animate attributeName="r" to="11" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="330" cy="95" r="1" stroke="red" fill="none"> <animate attributeName="r" to="12" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="270" cy="120" r="1" stroke="red" fill="none"> <animate attributeName="r" to="13" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="180" cy="130" r="1" stroke="red" fill="none"> <animate attributeName="r" to="14" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="120" cy="105" r="1" stroke="red" fill="none"> <animate attributeName="r" to="15" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="84" cy="120" r="1" stroke="red" fill="none"> <animate attributeName="r" to="16" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="76" cy="160" r="1" stroke="red" fill="none"> <animate attributeName="r" to="17" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="90" cy="185" r="1" stroke="red" fill="none"> <animate attributeName="r" to="18" dur="4s" repeatCount="indefinite"/> </circle>
   <!--圓點-->
   <circle id="circle" cx="0" cy="0" r="1" stroke="red" fill="white">
     <animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
