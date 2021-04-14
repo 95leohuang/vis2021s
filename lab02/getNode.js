@@ -23,7 +23,7 @@ function getNode(data, layer, container) {
     var treemap = document.createElement('div')
     d3.json('https://opendata.epa.gov.tw/api/v1/ATM00625?%24orderby=county&%24skip=0&%24top=1000&%24format=json', function (data) {
 
-        console.log(data)
+        // console.log(data)
 
         var nodesByType = d3.nest()
             .key(function (d) { return d.county })
@@ -40,7 +40,7 @@ function getNode(data, layer, container) {
         // 修改資料的的key, children名稱，並且依指定規則套用。
         root = reSortRoot(root, "KpData"); //layout用巢狀架構
 
-        console.log(root, "layout用巢狀架構")
+        // console.log(root, "layout用巢狀架構")
 
 
         //設定這個treemap的邊界
@@ -68,7 +68,7 @@ function getNode(data, layer, container) {
             .sum(function (d) { return d.PM25 })
             .sort(function (a, b) { return b.PM25 - a.PM25 })
 
-        console.log(d3ds)
+        // console.log(d3ds)
         //設定svg位置
         d3.treemap()
             .size([width, height])
