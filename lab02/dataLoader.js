@@ -44,7 +44,7 @@ function dataLoader(text,cb) {
 		for(var k in csvData[0]){
 			objectKeys.add(new Option(k, k))
 		}
-        objectKeys.value='類別'
+        objectKeys.value=''
 		cb()
     })
 }
