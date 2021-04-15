@@ -24,6 +24,8 @@ function getNode(data, layer, container) {
     d3.json('https://opendata.epa.gov.tw/api/v1/ATM00625?%24orderby=county&%24skip=0&%24top=1000&%24format=json', function (data) {
 
         // console.log(data)
+        document.getElementById("time").innerHTML = data[0].DataCreationDate;
+
 
         var nodesByType = d3.nest()
             .key(function (d) { return d.county })
