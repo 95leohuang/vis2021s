@@ -1,14 +1,226 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-  <head>
-    <meta charset="utf-8">
-    <title>D3 Page Template</title>
-    <script src="http://d3js.org/d3.v6.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Lab 7</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+    h1,
+    div {
+      background-color: rgba(255, 255, 0, 0.1);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 24pt;
+      border: solid 1px black;
+      width: 90%;
+      margin: 5px auto;
+      padding: 10px;
+    }
+
+    div {
+      font-size: 12pt;
+    }
+
+    #container {
+      height: 400px;
+      width: 1000px;
+    }
+
+    body {
+      background-color: rgba(255, 128, 255, 0.1);
+    }
+
+    video:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
+  <script src="https://unpkg.com/d3-interpolate-path/build/d3-interpolate-path.min.js"></script>
+
 </head>
+
 <body>
-    <script type="text/javascript">
-      // Your beautiful D3 code will go here
-    </script>
-  </body>
+  <h1>
+    lab07 漢字變形 Path Transitions
+  </h1>
+  <div>
+    限定使用 D3.js，參考以下影片。
+    <ul>
+      <li><a href="https://bocoup.com/blog/improving-d3-path-animation">Improving D3 Path Animation</a></li>
+      <li><a href="https://bost.ocks.org/mike/path/">https://bost.ocks.org/mike/path/</a></li>
+    </ul>
+  </div>
+
+  <div id="container">
+
+
+
+  </div>
+
+  <svg style="display:none" class="huang" viewBox="-10 0 266 256">
+    <g transform="matrix(1 0 0 -1 0 204)">
+      <path id="huang" fill="currentColor"
+        d="M113 22q1 -6 0 -13q-8 -18 -32 -33q-4 -1 -5 0q0 1 3 3q28 20 32 44q1 3 2 -1zM127 8q-6 2 0 2q49 -11 70 -29q3 -2 3 -4q0 -3 -3 -4q-13 -2 -17 4q-17 19 -53 31zM131 107q-3 -2 -3 -1q-2 -1 -1 -3q5 3 4 4zM199 125q4 5 13 1q4 -2 13 -7q3 -1 4 -1q3 -3 2 -5
+   q-2 -3 -6 -1q-12 3 -27 2q-14 0 -47 -5q-1 -1 -2 -1q-9 0 -23 -8q-1 -2 -1 -7v-13q16 3 24 3q9 1 18 1q5 0 13 -11q2 -5 6 -4q6 -6 0 -10q-3 -1 -6 -6q-16 -20 -34 -31q-13 -9 -19 2q-4 3 2 2q4 -2 17 5q25 14 27 37q-1 10 -9 12q-9 3 -39 -6q0 -3 -1 -8q-1 -6 0 -9q5 1 7 3
+   q1 1 5 2q-1 0 2 1h10q3 -3 -1 -5q-9 -2 -23 -7q0 -6 -1 -11h4q3 1 5 2q2 0 4 2l1 1h1q2 2 5 2q10 0 14 -1q2 -3 -5 -6q-16 -2 -41 -9q0 -7 -3 -6q-6 -1 -9 4q-2 2 -4 2q-1 -3 -7 3q-4 4 0 8q3 2 0 5q-10 13 -11 23q1 4 9 11q5 3 1 -2q-6 -6 -4 -10q3 -19 9 -23q4 -2 6 -6
+   q1 -3 5 -3q3 1 5 -1l10 2v12q-8 -3 -19 -4q-4 0 0 2q1 0 4 1q11 3 15 6q1 9 1 18q-17 -8 -28 -7q-2 2 1 3q23 7 27 9q-2 10 -1 20q-1 -1 -2 -1t-2 -1q-5 -1 -1 1q1 1 3 2q1 0 2 1q-2 2 -1 3q-65 -16 -84 -22q-11 -3 -19 -1q-3 0 -2 1q0 1 3 2q8 2 17 4q105 26 152 31
+   q8 -1 15 7zM144 210q4 1 13 -3q5 -2 1 -7q-2 -4 -5 -15q-3 -7 -5 -14q4 1 12 2q12 2 17 7q4 3 10 2t13 -5q2 -1 1 -3t-4 -2q-27 -2 -51 -9q-5 -17 -9 -25h4q3 1 5 2q6 -3 3 -9q-23 -4 -45 -11q-4 -2 -6 1q-1 3 2 5q33 9 38 37q-4 -2 -14 -4q-10 -3 -14 -4q0 -3 2 -12
+   q1 -3 2 -4q-1 -5 -7 -5q-2 0 -8 9q-3 5 -4 7q-22 -5 -35 -5h-4q0 1 4 3q4 1 22 5q10 3 12 4q-3 12 -11 25q-2 3 -1 4t4 -1q15 -13 21 -24q24 5 33 8q2 7 4 19q2 6 3 10v1q2 7 -4 9q-4 1 1 2z" />
+    </g>
+  </svg>
+
+
+  <svg style="display:none" viewBox="-29 0 296 256">
+    <g transform="matrix(1 0 0 -1 0 204)">
+      <path id="zi" fill="currentColor" d="M155 188q17 -2 29 -13q1 -2 -1 -4q-11 -2 -21 -15t-28 -27l12 -6q1 -1 0 -2q-2 -2 -1 -11q25 2 41 3q4 0 6 1q2 4 8 7q1 0 2 1q5 3 10 0v-1q7 -4 22 -9q8 -4 5 -8q-3 -6 -5 -4q-6 0 -12 4q-12 7 -30 5q-23 -2 -46 -5q5 -99 -20 -119q-5 -3 -9 -1q-8 5 -27 9q-16 4 -31 12
+     q-3 1 1 1q18 -6 52 -11q14 -4 21 6q12 25 5 102q-75 -14 -81 -20q-13 -7 -25 -3q-20 2 -21 3q-2 0 -2 1q1 1 3 2q12 0 23 2q10 2 28 6q54 12 74 15q-2 11 -9 13q-2 0 -6 2t-7 4t1 2q11 0 16 -1q14 18 23 37q4 6 2 9t-9 0q-31 -11 -51 -21q-16 -8 -16 -6q-5 1 -6 8q-1 1 -2 4
+     q-1 2 -1 4q-2 2 1 1q4 -4 6 -8q1 -2 8 0l1 1q5 1 23 8q24 8 32 11q1 0 2 1q5 2 5 6q1 4 5 4z" />
+    </g>
+
+
+  </svg>
+
+
+  <svg style="display:none" viewBox="-29 0 296 256">
+    <g transform="matrix(1 0 0 -1 0 204)">
+      <path id="yang" fill="currentColor" d="M61 168q18 -6 27 -7q4 -3 2 -6q-5 -5 -10 -2q-6 2 -14 8q-5 3 -7 5q-4 3 2 2zM66 106q2 -1 2 -2q1 -2 0 -2q-3 -2 -6 -6v-1q-1 -6 -6 3q-21 -2 -28 4q-2 2 2 1q9 -3 20 0q4 1 11 2q2 0 5 1zM183 200q-35 -13 -63 -36q-1 -2 -2 -5v-3q0 -3 -2 -2q-5 -1 -5 4q-2 8 1 21
+   q0 2 2 0q1 -4 2 -7q0 -3 1 -3l4 3q28 19 63 32q2 1 3 0q7 -2 10 -4q1 -2 0 -3q-3 -2 -6 -5l-2 -2q-18 -15 -49 -35q-3 -1 -2 1q36 27 46 41q1 1 1 2q-1 1 -2 1zM182 159q5 -2 10 -2q1 -1 3 -1q2 -1 4 -1q2 -2 1 -3q-1 -2 -2 -2h-2q-17 0 -54 -13q14 -12 11 -12q-1 -1 -1 -3
+   q-2 -4 -1 -8q10 2 17 6q1 2 3 2q6 1 16 1l2 -2q0 -1 -2 -2q-17 -4 -36 -11q-1 -11 1 -22q5 0 13 1l32 4q5 7 8 6h3h1q4 -3 12 -4q15 -5 20 -9q4 -3 -1 -7q-2 -2 -6 1q-20 13 -40 9q-19 -2 -42 -6v-6q2 -49 4 -75q-1 -13 6 -19q0 -1 2 -3q2 -3 5 -6q1 -2 -1 -4t-3 -1
+   q-5 4 -11 11q-4 5 -6 6q-2 2 -3 4l-1 1q-2 1 0 5q-2 4 7 4q-1 10 -2 35q-2 23 -2 47q-21 -4 -42 -11q-8 -3 -20 -1q-16 -38 -30 -64q-5 -4 -9 -4q-2 2 0 4q8 1 20 31q7 19 23 48q3 7 2 -1q-2 -3 -3 -6q-1 -4 -2 -6q2 0 6 1q2 0 5 1q25 7 49 12q0 7 -1 12v10q-17 -7 -31 -4
+   q-1 0 1 1q2 0 4 1q18 4 26 7q0 18 -6 25q-31 -8 -45 -10q-2 1 1 2q9 3 32 9q13 4 18 6q23 6 29 11q2 6 4 6q1 0 4 -1z" />
+    </g>
+
+  </svg>
+
+  <div>
+    展示區 (姓名)
+    <hr>
+    <img width="256" src="./huang.svg">
+    <img width="256" src="./zi.svg">
+    <img width="256" src="./yang.svg">
+  </div>
+
+  <div>
+    Drag and Drop 展示區 (接收任何SVG)
+  </div>
+  <script>
+    var svg = d3.select('#container')
+      .append('svg')
+      .attr({ 'width': 900, 'height': 400 });
+
+    var radius = d3.scale.linear()
+      .domain([0, 1])
+      .range([100, 200]);
+
+    var line = d3.svg.line
+      .radial()
+      .interpolate("basis-closed")
+      .radius(function (d) { return radius(d); })
+      .angle(function (d, i) { return scale(i); });
+
+    var data = d3.range(360).map(function (i) {
+      return Math.cos(Math.PI) / 6 + 0.8;
+    });
+
+    var scale = d3.scale.linear()
+      .domain([0, data.length])
+      .range([0, Math.PI * 2]);
+
+    group = svg.append('g')
+      .attr('transform', 'translate(' + 50 + ',' + 0 + ')matrix(1 0 0 -1 0 204)')
+      .attr("id", "huangcontainer");
+
+    group = svg.append('g')
+      .attr('transform', 'translate(' + 300 + ',' + 0 + ')matrix(1 0 0 -1 0 204)')
+      .attr("id", "zicontainer");
+
+    group = svg.append('g')
+      .attr('transform', 'translate(' + 560 + ',' + 0 + ')matrix(1 0 0 -1 0 204)')
+      .attr("id", "yangcontainer");
+
+    function Huang() {
+      return new Promise((resolve, reject) => {
+        d3.select("#huangcontainer").selectAll("path")
+          .data([data])
+          .enter()
+          .append("path")
+          .attr('d', line)
+          .attr('fill', 'none')
+          .attr('stroke', '#000')
+          .attr('stroke-width', 1)
+          .transition()
+          .duration(1000)
+          .attrTween('d', function (d) {
+            var previous = d3.select(this).attr('d');
+            var current = d3.select("#huang").attr('d');
+            return d3.interpolatePath(previous, current);
+          });
+        resolve();
+      });
+    }
+
+    function Zi() {
+      return new Promise((resolve, reject) => {
+        d3.select("#zicontainer").selectAll("path")
+          .data([data])
+          .enter()
+          .append("path")
+          .attr('d', line)
+          .attr('fill', 'none')
+          .attr('stroke', '#000')
+          .attr('stroke-width', 1)
+          .transition()
+          .duration(2000)
+          .attrTween('d', function (d) {
+            var previous = d3.select(this).attr('d');
+            var current = d3.select("#zi").attr('d');
+
+            return d3.interpolatePath(previous, current);
+          });
+        resolve();
+      });
+    }
+
+    function Yang() {
+      d3.select("#yangcontainer").selectAll("path")
+        .data([data])
+        .enter()
+        .append("path")
+        .attr('d', line)
+        .attr('fill', 'none')
+        .attr('stroke', '#000')
+        .attr('stroke-width', 1)
+        .transition()
+        .duration(4000)
+        .attrTween('d', function (d) {
+          var previous = d3.select(this).attr('d');
+          var current = d3.select("#yang").attr('d');
+
+          return d3.interpolatePath(previous, current);
+        });
+
+    }
+    Huang()
+      .then(() => {
+        return Zi();
+      })
+      .then(() => {
+        return Yang();
+      })
+      .catch((err) => {
+        console.log("拋出異常", err)
+      });
+
+
+
+
+
+
+
+
+
+
+  </script>
+
 </html>
-  
