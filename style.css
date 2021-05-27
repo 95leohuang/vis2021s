@@ -191,14 +191,18 @@ h1 .logo {
 }
 
 #about::before {
-	height: 0px;
+	/* height: 0px;
 	width: 0px;
 	border-left: 30px solid transparent;
 	border-right: 30px solid transparent;
 	border-top: 30px solid #131c23;
 	margin: 0 auto;
 	content: "";
-	display: block;
+	display: block; */
+}
+
+#about{
+	background-color: #ffb88a;
 }
 
 .social-links {
@@ -243,6 +247,7 @@ h1 .logo {
 }
 
 #about .info {
+	font-weight:bolder;
 	display: flex;
 	flex-direction: row;
 }
