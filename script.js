@@ -19,6 +19,20 @@ $(document).ready(function () {
 		}
 	});
 
+	const randomColor = (() => {
+		"use strict";
+
+		const randomInt = (min, max) => {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		};
+
+		return () => {
+			var h = randomInt(0, 360);
+			var s = randomInt(42, 98);
+			var l = randomInt(40, 90);
+			return `hsl(${h},${s}%,${l}%)`;
+		};
+	})();
 
 	d3.text("data.csv", function (data) {
 		var parsedCSV = d3.csv.parseRows(data);
@@ -30,12 +44,17 @@ $(document).ready(function () {
 			sectionHtml += "<section>"
 			sectionHtml += "<div class='overlay' onclick='popup(\"" + parsedCSV[i][0] + "\")'> "
 			sectionHtml += "<div class='description'>"
-			sectionHtml += "<p style='font-size:medium;'>"
-			sectionHtml += parsedCSV[i][1] + "</p>"
+			sectionHtml += "<p>" + parsedCSV[i][1] + "</p>"
 			sectionHtml += "<h6>Tools<span class='glyphicon glyphicon-cog'></span></h6>"
+
 			sectionHtml += "<ul class='tools vertical-list'>"
-			sectionHtml += "<li>" + parsedCSV[i][2] + "</li>"
+			var list = parsedCSV[i][2].split("/")
+			for (let j = 0; j < list.length; j++) {
+				let color = randomColor();
+				sectionHtml += "<li  style=' background-color:" + color + " ; '>" + list[j] + "</li>"
+			}
 			sectionHtml += "<ul>"
+
 			sectionHtml += "</div>"
 			sectionHtml += "<img src='" + parsedCSV[i][3] + "' alt='" + parsedCSV[i][4] + "' height='300'>"
 			sectionHtml += "<h4 class='heading'>" + parsedCSV[i][4] + "<span class='glyphicon glyphicon-hand-up'></span>" + parsedCSV[i][5] + "</h4>"
