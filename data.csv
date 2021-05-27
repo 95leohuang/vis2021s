@@ -1,0 +1,9 @@
+./lab00/index.html,上傳第一份svg檔案作為頭貼.,SVG,./lab00/1.svg,LAB 00,svg頭貼
+./lab01/index.html,利用svg PATH + animation繪出凱蒂貓軌道車、老鼠軌道車、電仔外框線條,SVG,./lab01/hellokitty.svg,LAB 01,凱蒂貓軌道車、老鼠軌道車、電仔
+./lab02/index.html,利用 Treemap Layout 將台灣細懸浮微粒資料視覺化,SVG,./lab02/02.JPG,LAB 02,Treemap
+./lab03/index.html,利用D3讀取GeoJSON顯示美國地圖,SVG,./lab03/03.JPG,LAB 03,GeoJSON 
+./lab04/index.html,製作 CSV 表格，table data cell 內放置 img,SVG,./lab04/04.JPG,LAB 04,CSV 數據處理
+./lab05/index.html,利用D3讀取CSV並呈現成條形圖,SVG,./lab05/05.JPG,LAB 05,BARPLOT
+./lab06/index.html,利用D3讀取CSV並呈現成直方圖,SVG,./lab06/06.JPG,LAB 06,HISTOGRAM
+./lab07/index.html,#方正瘦金書 #FontForge,SVG,./lab07/07.JPG,LAB 07,漢字變形 Path Transitions
+./lab09/index.html,利用D3讀取srt在影片中上字幕,SVG,./lab09/09.JPG,LAB 09,SVG 字幕

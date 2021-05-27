@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+  height="512" width="512" viewBox="0 0 512 512">
+
+  <image href="https://s0.gifyu.com/images/hello_kitty_Hello_Kitty_Head_ClipArt_in_PNG_File.png" height="512" width="512" />
+
+  <rect width="512" height="512" stroke="red" fill="rgba(255,255,255,0.95)" opacity="0.95" ></rect>
+
+  <text x="2" y="12" font-size="12" text-anchor="start" fill="red">0</text>
+  <path d="M256  64 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="68" font-size="12" text-anchor="start" fill="red">64</text>
+  <path d="M256 128 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="132" font-size="12" text-anchor="start" fill="red">128</text>
+  <path d="M256 192 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="196" font-size="12" text-anchor="start" fill="red">192</text>
+  <path d="M256 256 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="260" font-size="12" text-anchor="start" fill="red">256</text>
+  <path d="M256 320 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="324" font-size="12" text-anchor="start" fill="red">320</text>
+  <path d="M256 384 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="388" font-size="12" text-anchor="start" fill="red">384</text>
+  <path d="M256 448 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="452" font-size="12" text-anchor="start" fill="red">448</text>
+  <text x="2" y="510" font-size="12" text-anchor="start" fill="red">512</text>
+
+  <path d="M64  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="58" y="12" font-size="12" text-anchor="start" fill="red">64</text>
+  <path d="M128  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="118" y="12" font-size="12" text-anchor="start" fill="red">128</text>
+  <path d="M195  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="186" y="12" font-size="12" text-anchor="start" fill="red">192</text>
+  <path d="M256  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="246" y="12" font-size="12" text-anchor="start" fill="red">256</text>
+  <path d="M320  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="310" y="12" font-size="12" text-anchor="start" fill="red">320</text>
+  <path d="M384  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="374" y="12" font-size="12" text-anchor="start" fill="red">384</text>
+  <path d="M448  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="438" y="12" font-size="12" text-anchor="start" fill="red">448</text>
+  <text x="492" y="12" font-size="12" text-anchor="start" fill="red">512</text>
+
+
+  <defs>
+    <path id="path"
+        d="M95 180 A120 140, 0, 0, 0, 63 300
+                   ,120 140, 0, 0, 0, 128 390
+                   ,190 100, 0, 0, 0, 400 390
+                   ,100 125, 0, 0, 0, 440 230
+                   ,120 100, 30, 0, 0, 456 190
+                   ,1000 120, 130, 0, 0, 437 155
+                   ,100 100, 0, 0, 0, 420 100
+                   ,40 80, 10, 0, 0, 395 90
+                   ,100 100, 1, 0, 0, 348 115
+                   ,100 100, 0, 0, 0, 330 95
+                   ,1000 130, 290, 0, 0, 270 120
+                   ,150 150, 20, 0, 0, 180 130
+                   ,150 150, 20, 0, 0, 120 105
+                   ,1000 150, 100, 0, 0, 84 120
+                   ,10 30, 20, 0, 0, 76 160
+                   ,100 50, 0, 0, 0, 90 185z
+    "/>
+  </defs>
+
+  <use xlink:href="#path" stroke-width="10" stroke="#F00" fill="none" opacity="0.3"/>
+
+<circle cx="95"  cy="180" r="1" stroke="red" fill="red"> <animate attributeName="r" to="2" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="63"  cy="300" r="1" stroke="red" fill="none"> <animate attributeName="r" to="3" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="128" cy="390" r="1" stroke="red" fill="none"> <animate attributeName="r" to="4" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="400" cy="390" r="1" stroke="red" fill="none"> <animate attributeName="r" to="5" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="440" cy="230" r="1" stroke="red" fill="none"> <animate attributeName="r" to="6" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="456" cy="190" r="1" stroke="red" fill="none"> <animate attributeName="r" to="7" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="437" cy="155" r="1" stroke="red" fill="none"> <animate attributeName="r" to="8" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="420" cy="100" r="1" stroke="red" fill="none"> <animate attributeName="r" to="9" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="395" cy="90" r="1" stroke="red" fill="none"> <animate attributeName="r" to="10" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="348" cy="115" r="1" stroke="red" fill="none"> <animate attributeName="r" to="11" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="330" cy="95" r="1" stroke="red" fill="none"> <animate attributeName="r" to="12" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="270" cy="120" r="1" stroke="red" fill="none"> <animate attributeName="r" to="13" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="180" cy="130" r="1" stroke="red" fill="none"> <animate attributeName="r" to="14" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="120" cy="105" r="1" stroke="red" fill="none"> <animate attributeName="r" to="15" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="84" cy="120" r="1" stroke="red" fill="none"> <animate attributeName="r" to="16" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="76" cy="160" r="1" stroke="red" fill="none"> <animate attributeName="r" to="17" dur="4s" repeatCount="indefinite"/> </circle>
+<circle cx="90" cy="185" r="1" stroke="red" fill="none"> <animate attributeName="r" to="18" dur="4s" repeatCount="indefinite"/> </circle>
+  <!--圓點-->
+  <circle id="circle" cx="0" cy="0" r="1" stroke="red" fill="white">
+    <animateMotion dur="4s" repeatCount="indefinite" rotate="auto">
+      <mpath xlink:href="#path"/>
+    </animateMotion>
+    <animate attributeName="r" to="18" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+
