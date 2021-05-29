@@ -116,7 +116,18 @@ h1 .logo {
     position: relative;
 }
 
+.closeBg {
+    border-radius: 25px;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
 .AbsoluteCenter {
+    border-radius: 25px;
     height: 90%;
     /* Set your own height: percents, ems, whatever! */
     width: 80%;
@@ -131,7 +142,22 @@ h1 .logo {
     left: 0;
     bottom: 0;
     right: 0;
+    background-color: azure;
+    -webkit-animation-name: cssAnimation;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
     /* Set the bounds in which to center it, relative to its parent/container */
+}
+
+@-webkit-keyframes cssAnimation {
+    from {
+        -webkit-transform: scaleX(0%) scaleY(0%);
+    }
+    to {
+        -webkit-transform: scaleX(100%) scaleY(100%);
+    }
 }
 
 .AbsoluteCenter90 {
@@ -152,11 +178,30 @@ h1 .logo {
     /* Set the bounds in which to center it, relative to its parent/container */
 }
 
+.AbsoluteFullCenter {
+    height: 100%;
+    /* Set your own height: percents, ems, whatever! */
+    width: 100%;
+    /* Set your own width: percents, ems, whatever! */
+    overflow: auto;
+    /* Recommended in case content is larger than the container */
+    margin: auto;
+    /* Center the item vertically & horizontally */
+    position: fixed;
+    /* Break it out of the regular flow */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0 0 0 / 50%);
+    /* Set the bounds in which to center it, relative to its parent/container */
+}
+
 #visitor {
     background-color: #423a3a;
 }
 
-#visitor a {
+#visitor p {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -164,9 +209,12 @@ h1 .logo {
     padding-top: 0;
     padding-bottom: 2%;
     width: 10%;
+    color: white;
 }
 
 #close {
+    position: absolute;
+    right: 0px;
     color: red;
     font-size: 40px;
     padding: 10px;
