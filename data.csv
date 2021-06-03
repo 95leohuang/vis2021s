@@ -7,4 +7,4 @@
 ./lab06/index.html,利用D3讀取CSV並呈現成直方圖,SVG/D3/CSV/AXIS,./lab06/06.JPG,LAB 06,stacked barplot
 ./lab07/index.html,漢字變形 Path Transitions #方正瘦金書 #FontForge,SVG/D3/方正瘦金書/FontForge,./lab07/07.JPG,LAB 07,圓變漢字
 ./lab09/index.html,利用D3讀取srt在影片中上字幕,SVG/D3/srt,./lab09/09.JPG,LAB 09,SVG 字幕
-./lab14/index.html,使用 D3.v3.js 繪製地圖,D3/GeoJSON,./lab14/14.JPG,LAB 14,臺灣地圖
+./lab14/index.html,使用 D3.v3.js 繪製地圖,D3/Topojson,./lab14/14.JPG,LAB 14,臺灣地圖
