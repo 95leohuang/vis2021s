@@ -111,14 +111,41 @@
                 d += data[i];
             }
 
+            const randomColor = (() => {
+                "use strict";
+
+                const randomInt = (min, max) => {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                };
+
+                return () => {
+                    var h = randomInt(0, 360);
+                    var s = randomInt(42, 98);
+                    var l = randomInt(40, 90);
+                    return `hsl(${h},${s}%,${l}%)`;
+                };
+            })();
+
             d3.select(pathId)
                 .attr("d", circle)
                 .transition()
                 .duration(4000)
                 .on("start", function repeat() {
                     d3.active(this)
+                        .attrTween("fill", function(d) {
+                            return d3.interpolateRgb(randomColor(), randomColor());
+                        })
+                        .attrTween("stroke", function(d) {
+                            return d3.interpolateRgb(randomColor(), randomColor());
+                        })
                         .attrTween("d", pathTween(d, 4))
                         .transition()
+                        .attrTween("fill", function(d) {
+                            return d3.interpolateRgb(randomColor(), randomColor());
+                        })
+                        .attrTween("stroke", function(d) {
+                            return d3.interpolateRgb(randomColor(), randomColor());
+                        })
                         .attrTween("d", pathTween(circle, 4))
                         .transition()
                         .on("start", repeat);
