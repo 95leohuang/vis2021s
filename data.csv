@@ -5,6 +5,8 @@
 ./lab04/index.html,製作 CSV 表格，table data cell 內放置 img,SVG/D3/CSV,./lab04/04.JPG,LAB 04,成績單
 ./lab05/index.html,利用D3讀取CSV並呈現成條形圖,SVG/D3/CSV/BAR,./lab05/05.JPG,LAB 05,histogram
 ./lab06/index.html,利用D3讀取CSV並呈現成直方圖,SVG/D3/CSV/AXIS,./lab06/06.JPG,LAB 06,stacked barplot
-./lab07/index.html,漢字變形 Path Transitions #方正瘦金書 #FontForge,SVG/D3/方正瘦金書/FontForge,./lab07/07.gif,LAB 07,圓變漢字
+./lab07/index.html,使用 FontForge 輸出，再使用 InkScape 描繪字體，製作出筆畫線段,SVG/D3/方正瘦金書/FontForge,./lab07/07.gif,LAB 07,圓變漢字
+./lab08/index.html,使用 FontForge 輸出，再使用 InkScape 描繪字體，製作出筆畫線段,SVG/D3,./lab08/08.gif,LAB 08,漢字書寫
 ./lab09/index.html,利用D3讀取srt在影片中上字幕,SVG/D3/srt,./lab09/09.JPG,LAB 09,SVG 字幕
 ./lab14/index.html,使用 D3.v3.js 繪製地圖,D3/Topojson,./lab14/14.JPG,LAB 14,臺灣地圖
+./lab66/html -- 資料渲染/index.html,台灣電力公司_鄉鎮市(郵遞區)別用電統計資料<br>組員：黃子洋、羅聖儒,D3/BinaryDecisionTree,./lab66/66.gif,LAB 66,Final
