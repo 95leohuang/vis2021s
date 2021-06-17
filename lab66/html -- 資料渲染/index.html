@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        html,
+        body {
+            height: 200%;
+        }
+        
+        #training-section,
+        #testing-section {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #train-vs-test {
+            height: 100%;
+            position: fixed;
+            max-width: 100%;
+        }
+        
+        .padding {
+            height: 100%;
+        }
+        
+        #right {
+            width: 60%;
+            height: 100%;
+            position: relative;
+            float: right;
+        }
+        
+        #left {
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="right">
+        <div id="train-vs-test"></div>
+    </div>
+
+    <div id="left">
+
+        <div>
+            <h1>
+                台灣電力公司_鄉鎮市(郵遞區)別用電統計資料 大安區-林口區
+            </h1>
+        </div>
+
+        <div id="training-section">
+            <h1>
+                <!--訓練資料集的部分 -->
+            </h1>
+        </div>
+        <div id="testing-section">
+            <h1>
+                <!--測試資料集的部分 -->
+            </h1>
+        </div>
+    </div>
+
+
+
+
+    <script src="./lib/d3.v3.min.js"></script>
+    <script src="./lib/binarydecisiontree.min.js"></script>
+
+    <script>
+        var Lipsum = "根據台電開放資料製作，包含工業、住宅、服務業等全部用電戶 (不包括台電自用的), 主要欄位為行政區、用電種類、用戶數、契約容量、售電度數(當月)， 此份資料是依照台電用電種類(供電方式)區分，雖然無法100%對應到服務業、住宅業與工業這種我們孰知的部門別，但可以大致判別其營業規模類型。並依此規劃當電力生產不足使用時，政府如何增加電力產能";
+
+        var capacity = "所謂「契約容量」，就如同行動電話基本月租費，若月租費設定為1,000元，但每個月實際上只撥打100元費用，這差價900元就形同浪費。電力公司按契約容量準備供應電力之供電設備，要求用戶依契約容量使用電力，以保障電力系統供電之安全。如用戶因臨時增加用電設備使電力會超過契約容量，稱為超約用電。此時應注意到是否因超約用量影響系統供電設備安全，且會使用到系統上的備轉容量，其設備利用率較低，故分攤成本高而造成增加電費負擔。";
+
+        var capacity2 = "一般工廠用電可能有淡季、旺季或季節性用電多寡的差異，以及在生產階段有尖峰、離峰用電之差異，因之需檢討全年度之用電情形，再決定與電力公司訂定契約容量，如當年度負擔之基本電費最少，則該契約容量即為最適當用電容量。"
+
+        window.onload = function() {
+            function resizeRight() {
+                d3.select("#train-vs-test")
+                    .style("width", d3.select("#right").node().clientWidth + "px");
+            }
+
+            resizeRight();
+
+
+            d3.select(window)
+                .on("resize", function() {
+                    resizeRight()
+                });
+
+
+
+            /**
+             * 填版面，不然全部都是白色的很單調
+             * 這兩個 section 是要讓同學放說明資料和圖片的地方
+             */
+            d3.select("#training-section")
+                .selectAll("p")
+                .data(d3.range(1, 2))
+                .enter()
+                .append("p")
+                .text(Lipsum);
+
+            //image part
+            d3.select("#training-section")
+                .selectAll("img")
+                .data(d3.range(1, 2))
+                .enter()
+                .append("img")
+                //.attr("src", function(d){ return "media/" + d + ".png"})
+                .attr("src", "media/view.png")
+                .style('height', '350px')
+                .style('width', '600px');
+
+            d3.select("#training-section")
+                .append("h1")
+                .text("什麼是契約容量？")
+                .selectAll("p")
+                .append("p")
+                .text(capacity);
+
+            d3.select("#training-section")
+                .append("p")
+                .text(capacity)
+                .append("p")
+                .text(capacity2);
+
+            //test part
+            /*
+                d3.select("#testing-section")
+                    .selectAll("p")
+                    .data(d3.range(1, 10))
+                    .enter()
+                    .append("p")
+                    .text(Lipsum)
+                ;
+				
+
+
+
+                d3.select("#testing-section")
+                    .selectAll("img")
+					.data(d3.range(4, 7))
+					.enter()
+					.append("img")
+					.attr("src", function(d){ return "media/" + d + ".png"})
+                    .style('height', '350px')
+                    .style('width', '350px')
+                ;
+                */
+
+
+
+            var bdt = new BinaryDecisionTree({
+                el: "#train-vs-test",
+                trainingSection: "#training-section",
+                testSection: "#testing-section",
+
+                /**
+                 * 預設會讓小球在上方排排站
+                 * 如果不要排排站的話，必須要把這個 paramater 設成 false
+                 * 如果要排排站的話，直接註解掉這行就行
+                 */
+                //flood: false
+            });
+
+            bdt.setDataFromJson("./dataset.json", function() {
+                bdt.install();
+                bdt.play();
+            })
+
+            /**
+             * or
+             * bdt.setDataFromObject({ 
+             *  tree_data: tree_data,
+             *  tree_training_set: tree_training_set,
+             *  tree_stats: tree_stats, 
+             *  tree_test_set: tree_test_set, 
+             *  test_stats : test_stats
+             * })
+             * 同步函式，不需要 callback
+             * bdt.install();
+             * bdt.play();
+             */
+        }
+    </script>
+
+</body>
+
+
+
+</html>
