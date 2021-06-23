@@ -160,6 +160,74 @@ h1 .logo {
     }
 }
 
+#nav {
+    background: url("http://thumb1.shutterstock.com/display_pic_with_logo/1487123/134611310/stock-vector-colorful-geometric-background-with-triangles-vector-eps-134611310.jpg");
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#nav ul {
+    list-style: none;
+}
+
+#nav li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#nav li:hover {
+    background: aquamarine;
+}
+
+#nav li:hover a {
+    color: black;
+}
+
+.dropbtn {
+    background-color: transparent;
+    padding: 16px;
+    border: none;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aquamarine;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 300px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(127, 193, 255);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: black;
+    background-color: aquamarine;
+}
+
 .AbsoluteCenter90 {
     height: 95%;
     /* Set your own height: percents, ems, whatever! */
@@ -175,10 +243,12 @@ h1 .logo {
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 2000;
     /* Set the bounds in which to center it, relative to its parent/container */
 }
 
 .AbsoluteFullCenter {
+    z-index: 2000;
     height: 100%;
     /* Set your own height: percents, ems, whatever! */
     width: 100%;
