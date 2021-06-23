@@ -1,8 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 body {
     font-family: "Fauna One", serif;
     font-size: 20px;
@@ -167,6 +162,8 @@ h1 .logo {
     top: 0;
     left: 0;
     width: 100%;
+    font-family: 'cwTeXKai', serif;
+    font-size: 30px;
 }
 
 #nav ul {
