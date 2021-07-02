@@ -265,7 +265,8 @@ h1 .logo {
 }
 
 #visitor {
-    background-color: #423a3a;
+    background-color: #243239;
+    border: 20px solid #243239;
 }
 
 #visitor p {
@@ -447,12 +448,35 @@ h1 .logo {
 }
 
 #portfolio {
-    background-color: #423a3a;
     padding-bottom: 80px;
 }
 
+#portfolio {
+    /* background-color: rgba(137, 202, 255, 0.83); */
+    padding-bottom: 80px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio::after {
+    content: "";
+    background-image: url(./water.gif);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#portfolioContainer {
+    background-color: rgba(248, 247, 216, 0);
+}
+
 #portfolio h2 {
-    color: #f0f0f0;
     margin-bottom: 140px;
 }
 
@@ -537,15 +561,15 @@ h1 .logo {
 }
 
 #portfolio div:nth-child(odd) section {
-    background-color: #483f3f;
+    /* background-color: #483f3f; */
     padding: 10px;
     border: 3px solid #4d4343;
 }
 
 #portfolio div:nth-child(even) section {
-    background-color: #3d3636;
+    /* background-color: #3d3636; */
     padding: 10px;
-    border: 3px solid #393333;
+    /* border: 3px solid #393333; */
 }
 
 #portfolio img {
