@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // $("nav a").on("click", function (event) {
     // 	// event.preventDefault();
@@ -9,7 +9,7 @@ $(document).ready(function() {
     // 	$("body, html").animate({ scrollTop: scrollVertical });
     // });
 
-    $(document).on("scroll", function() {
+    $(document).on("scroll", function () {
         secondPage = $("nav li:nth-child(2) a").attr("href");
 
         if ($("body").scrollTop() >= $("nav").height()) {
@@ -34,7 +34,7 @@ $(document).ready(function() {
         };
     })();
 
-    d3.text("data.csv", function(data) {
+    d3.text("data.csv", function (data) {
         var parsedCSV = d3.csv.parseRows(data);
         console.log(parsedCSV)
 
@@ -85,9 +85,12 @@ function popup(src) {
 
 function removePopup() {
     // $("#popup").remove()
-    $(".AbsoluteCenter").animate({ width: "10%", height: "10", },
+    $(".AbsoluteCenter").animate({
+            width: "10%",
+            height: "10",
+        },
         350,
-        function() {
+        function () {
             // Animation complete.
             $("#popup").remove()
             enableScrolling()
@@ -97,15 +100,17 @@ function removePopup() {
 function disableScrolling() {
     var x = window.scrollX;
     var y = window.scrollY;
-    window.onscroll = function() { window.scrollTo(x, y); };
+    window.onscroll = function () {
+        window.scrollTo(x, y);
+    };
 }
 
 function enableScrolling() {
-    window.onscroll = function() {};
+    window.onscroll = function () {};
 }
 
 function scrolltoID(id, speed = 800) {
     $('html, body').animate({
-        scrollTop: $('#' + id).offset().top
+        scrollTop: $('#' + id).offset().top - $("#nav").height()
     }, speed);
 }
